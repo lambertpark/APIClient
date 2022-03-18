@@ -17,10 +17,12 @@ class ViewController: UIViewController {
         async {
             try await createUser()
         }
+        
     }
 
     func createUser() async {
-        let client = APIClient(host: "http://data.fixer.io") {
+        let client = APIClient(host: "pokeapi.co/api/v2") {
+            $0.sessionConfiguration.httpAdditionalHeaders = ["Content-type": "application/json"]
             $0.sessionDelegate = PulseCore.URLSessionProxyDelegate()
 
             // If you also have a session delegate, add it to the delegate chain
@@ -28,7 +30,7 @@ class ViewController: UIViewController {
         }
 
         do {
-            try await client.send(.get("/api/latest?access_key=14281c876ca6a11470587b7eb4982b89")).value
+            try await client.send(.get("/pokemon")).value
         } catch {
             print(error)
         }

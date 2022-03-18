@@ -18,6 +18,9 @@
 		6F94CDFF27E4A4B100B1BB69 /* PulseUI in Frameworks */ = {isa = PBXBuildFile; productRef = 6F94CDFE27E4A4B100B1BB69 /* PulseUI */; };
 		6F94CE0927E4A5DE00B1BB69 /* Get in Frameworks */ = {isa = PBXBuildFile; productRef = 6F94CE0827E4A5DE00B1BB69 /* Get */; };
 		6F94CE0B27E4A63A00B1BB69 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F94CE0A27E4A63A00B1BB69 /* User.swift */; };
+		6F94CE1027E4AF8700B1BB69 /* Currencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F94CE0D27E4AF8700B1BB69 /* Currencies.swift */; };
+		6F94CE1227E4AF8700B1BB69 /* Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F94CE0F27E4AF8700B1BB69 /* Converter.swift */; };
+		6F94CE1427E4B4D200B1BB69 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F94CE1327E4B4D200B1BB69 /* Pokemon.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		6F94CDEE27E4A39800B1BB69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6F94CDF027E4A39800B1BB69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6F94CE0A27E4A63A00B1BB69 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		6F94CE0D27E4AF8700B1BB69 /* Currencies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Currencies.swift; sourceTree = "<group>"; };
+		6F94CE0F27E4AF8700B1BB69 /* Converter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Converter.swift; sourceTree = "<group>"; };
+		6F94CE1327E4B4D200B1BB69 /* Pokemon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +72,7 @@
 		6F94CDE127E4A39700B1BB69 /* APIClient */ = {
 			isa = PBXGroup;
 			children = (
+				6F94CE0C27E4AF7300B1BB69 /* Model */,
 				6F94CDE227E4A39700B1BB69 /* AppDelegate.swift */,
 				6F94CE0A27E4A63A00B1BB69 /* User.swift */,
 				6F94CDE427E4A39700B1BB69 /* SceneDelegate.swift */,
@@ -76,6 +83,16 @@
 				6F94CDF027E4A39800B1BB69 /* Info.plist */,
 			);
 			path = APIClient;
+			sourceTree = "<group>";
+		};
+		6F94CE0C27E4AF7300B1BB69 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6F94CE1327E4B4D200B1BB69 /* Pokemon.swift */,
+				6F94CE0F27E4AF8700B1BB69 /* Converter.swift */,
+				6F94CE0D27E4AF8700B1BB69 /* Currencies.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,10 +176,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F94CE1427E4B4D200B1BB69 /* Pokemon.swift in Sources */,
 				6F94CE0B27E4A63A00B1BB69 /* User.swift in Sources */,
 				6F94CDE727E4A39700B1BB69 /* ViewController.swift in Sources */,
+				6F94CE1227E4AF8700B1BB69 /* Converter.swift in Sources */,
 				6F94CDE327E4A39700B1BB69 /* AppDelegate.swift in Sources */,
 				6F94CDE527E4A39700B1BB69 /* SceneDelegate.swift in Sources */,
+				6F94CE1027E4AF8700B1BB69 /* Currencies.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
