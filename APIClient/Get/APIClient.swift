@@ -144,7 +144,7 @@ public actor APIClient {
         guard let url = components.url else {
             throw URLError(.badURL)
         }
-        return URL(string: "https://pokeapi.co/api/v2/pokemon")!//url
+        return url//URL(string: "https://pokeapi.co/api/v2/pokemon")!//url
     }
 
     private func makeRequest(url: URL, method: String, body: AnyEncodable?, headers: [String: String]?) async throws -> URLRequest {
