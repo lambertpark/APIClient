@@ -22,15 +22,16 @@ class ViewController: UIViewController {
 
     func createUser() async {
         let client = APIClient(host: "pokeapi.co/api/v2") {
-            $0.sessionConfiguration.httpAdditionalHeaders = ["Content-type": "application/json"]
-            $0.sessionDelegate = PulseCore.URLSessionProxyDelegate()
+            $0.sessionConfiguration.httpAdditionalHeaders = ["Content-Type": "application/x-www-form-urlencoded"]
+            //$0.sessionDelegate = PulseCore.URLSessionProxyDelegate()
 
             // If you also have a session delegate, add it to the delegate chain
             //$0.sessionDelegate = PulseCore.URLSessionProxyDelegate(delegate: yourDelegate)
         }
 
         do {
-            try await client.send(.get("/pokemon")).value
+            let pokemons: Pokemons = try await client.send(.get("/pokemon")).value
+            print(">>>>>>>>>>>>>>>\(pokemons)")
         } catch {
             print(error)
         }
